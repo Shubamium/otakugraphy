@@ -37,7 +37,7 @@ export default defineType({
       hidden: ({parent}) => parent?.type === 'video',
     }),
     defineField({
-      name: 'Video',
+      name: 'video',
       title: 'Video File',
       type: 'file',
       hidden: ({parent}) => parent?.type === 'image',

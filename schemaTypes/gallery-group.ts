@@ -47,7 +47,7 @@ export default defineType({
       name: 'ml',
       title: 'Media List',
       type: 'array',
-      of: [{type: 'media'}],
+      of: [{type: 'reference', to: {type: 'media'}}],
     }),
   ],
 })
