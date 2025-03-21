@@ -34,13 +34,13 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
-      hidden: ({document}) => document?.type === 'video',
+      hidden: ({parent}) => parent?.type === 'video',
     }),
     defineField({
       name: 'Video',
       title: 'Video File',
       type: 'file',
-      hidden: ({document}) => document?.type === 'image',
+      hidden: ({parent}) => parent?.type === 'image',
     }),
 
     defineField({
@@ -48,6 +48,11 @@ export default defineType({
       title: 'General Data',
       type: 'object',
       fields: [
+        defineField({
+          name: 'alt',
+          title: 'Title',
+          type: 'string',
+        }),
         defineField({
           name: 'l',
           title: 'Location',
