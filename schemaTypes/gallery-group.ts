@@ -29,18 +29,20 @@ export default defineType({
             value: 'horizontal',
           },
           {
+            title: 'Two Columns',
+            value: 'twoColumns',
+          },
+          {
+            title: 'Expanding Columns',
+            value: 'exCols',
+          },
+          {
             title: 'Fixed A (5 Images)',
             value: 'fixedA',
           },
         ],
       },
       validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'amount',
-      title: 'Layout Setting',
-      description: '(Row/Col) amount for dynamic layout preset, if required',
-      type: 'number',
     }),
 
     defineField({
