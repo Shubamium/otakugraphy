@@ -34,6 +34,9 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      options: {
+        metadata: ['image', 'exif', 'location', 'blurhash'],
+      },
       hidden: ({parent}) => parent?.type === 'video',
     }),
     defineField({
