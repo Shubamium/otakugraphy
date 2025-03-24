@@ -40,6 +40,18 @@ export default defineType({
             title: 'Fixed A (5 Images)',
             value: 'fixedA',
           },
+          {
+            title: 'Fixed B (6 Images)',
+            value: 'fixedB',
+          },
+          {
+            title: 'Fixed C (4 Images)',
+            value: 'fixedC',
+          },
+          {
+            title: 'Fixed D (6 Images)',
+            value: 'fixedD',
+          },
         ],
       },
       validation: (rule) => rule.required(),
