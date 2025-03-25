@@ -10,6 +10,7 @@ export default defineType({
     defineField({
       name: 'name',
       title: 'Identifier',
+      description: 'Only used internally for searching purposes',
       type: 'string',
     }),
     defineField({
@@ -50,12 +51,17 @@ export default defineType({
       name: 'gd',
       title: 'General Data',
       type: 'object',
+      options: {
+        collapsed: true,
+        collapsible: true,
+      },
       fields: [
         defineField({
           name: 'alt',
-          title: 'Title',
+          title: 'Hover Title',
           type: 'string',
         }),
+
         defineField({
           name: 'l',
           title: 'Location',
@@ -69,6 +75,16 @@ export default defineType({
         defineField({
           name: 'e',
           title: 'Event Name',
+          type: 'string',
+        }),
+        defineField({
+          name: 'c',
+          title: 'Convention Name',
+          type: 'string',
+        }),
+        defineField({
+          name: 'clink',
+          title: 'Collection Links (Frame.io)',
           type: 'string',
         }),
       ],
