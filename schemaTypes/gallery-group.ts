@@ -16,7 +16,6 @@ export default defineType({
     defineField({
       name: 'lt',
       title: 'Layout Preset',
-      description: 'Will add more soon',
       type: 'string',
       options: {
         list: [
