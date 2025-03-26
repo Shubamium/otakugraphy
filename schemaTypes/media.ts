@@ -61,6 +61,16 @@ export default defineType({
           title: 'Hover Title',
           type: 'string',
         }),
+        defineField({
+          name: 'otgr',
+          title: 'OTG Role',
+          type: 'string',
+        }),
+        defineField({
+          name: 'otgn',
+          title: 'OTG Name',
+          type: 'string',
+        }),
 
         defineField({
           name: 'l',
@@ -74,7 +84,7 @@ export default defineType({
         }),
         defineField({
           name: 'e',
-          title: 'Event Name',
+          title: 'General Name',
           type: 'string',
         }),
         defineField({
