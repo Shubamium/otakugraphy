@@ -45,5 +45,30 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'abi',
+      title: 'About Us Image',
+      type: 'image',
+    }),
+    defineField({
+      name: 'om',
+      title: 'Our Mission Image',
+      type: 'image',
+    }),
+    defineField({
+      name: 'v1',
+      title: 'Values 1',
+      type: 'image',
+    }),
+    defineField({
+      name: 'v2',
+      title: 'Values 2',
+      type: 'image',
+    }),
+    defineField({
+      name: 'v3',
+      title: 'Values 3',
+      type: 'image',
+    }),
   ],
 })
