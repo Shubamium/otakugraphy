@@ -36,6 +36,10 @@ export default defineType({
               type: 'string',
             }),
             defineField({
+              name: 'route',
+              type: 'string',
+            }),
+            defineField({
               name: 'ml',
               title: 'Media List',
               type: 'array',
