@@ -13,6 +13,39 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'highlights',
+      title: 'Highlights',
+      type: 'object',
+      fields: [
+        {
+          name: 'ht',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'thumbnail',
+          title: 'Thumbnail',
+          type: 'image',
+        },
+        {
+          name: 'link',
+          title: 'Link',
+          type: 'url',
+        },
+      ],
+    }),
+    defineField({
+      name: 'side_images',
+      title: 'Heading Side Images',
+      type: 'array',
+      of: [{type: 'image'}],
+    }),
+    defineField({
       name: 's',
       title: 'Slug',
       type: 'slug',

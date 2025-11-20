@@ -36,7 +36,7 @@ export default defineType({
               type: 'string',
             }),
             defineField({
-              name: 'route',
+              name: 'route_link',
               type: 'string',
             }),
             defineField({
@@ -45,6 +45,34 @@ export default defineType({
               type: 'array',
               of: [{type: 'reference', to: {type: 'media'}}],
             }),
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'testimonials',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              type: 'string',
+            },
+            {
+              name: 'pfp',
+              title: ' Profile Picture',
+              type: 'image',
+            },
+            {
+              name: 'role',
+              type: 'string',
+            },
+            {
+              name: 'text',
+              type: 'text',
+            },
           ],
         },
       ],
