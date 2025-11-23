@@ -13,7 +13,16 @@ export default defineType({
       description: `set it as 'main' to use this preset`,
       type: 'string',
     }),
-
+    defineField({
+      name: 'gated',
+      title: 'Is Under Construction?',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'gated_pass',
+      title: 'Website Password',
+      type: 'string',
+    }),
     defineField({
       name: 'hlm',
       title: 'Highlights Media',
