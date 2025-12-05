@@ -79,6 +79,14 @@ export default defineType({
               type: 'string',
             },
             {
+              name: 'x',
+              type: 'url',
+            },
+            {
+              name: 'website',
+              type: 'url',
+            },
+            {
               name: 'text',
               type: 'text',
             },
