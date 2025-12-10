@@ -7,9 +7,11 @@ import general from './general'
 import homeCategory from './home-category'
 import media from './media'
 import otgDifference from './otg-difference'
+import partners from './partners'
 
 export const schemaTypes = [
   general,
+  partners,
   gallery,
   galleryGroup,
   media,
