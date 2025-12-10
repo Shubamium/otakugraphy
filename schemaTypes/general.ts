@@ -119,5 +119,15 @@ export default defineType({
       title: 'Values 3',
       type: 'image',
     }),
+    defineField({
+      name: 'omdesc',
+      title: 'Our Mission Text',
+      type: 'text',
+    }),
+    defineField({
+      name: 'audesc',
+      title: 'About Us Text',
+      type: 'text',
+    }),
   ],
 })
