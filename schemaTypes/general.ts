@@ -11,11 +11,11 @@ export default defineType({
     },
     {
       name: 'our_mission',
-      title: 'Our Mission Section',
+      title: 'Our Mission',
     },
     {
       name: 'about_us',
-      title: 'About Us Section',
+      title: 'Services',
     },
     {
       name: 'testimonials',
@@ -57,6 +57,14 @@ export default defineType({
       description: 'Highlights on main page (7 media)',
       type: 'array',
       of: [{type: 'reference', to: {type: 'media'}}],
+    }),
+
+    defineField({
+      name: 'sectord',
+      title: 'Section Order',
+      type: 'array',
+      group: 'global',
+      of: [{type: 'string'}],
     }),
 
     defineField({
@@ -113,6 +121,14 @@ export default defineType({
               type: 'url',
             },
             {
+              name: 'twitch',
+              type: 'url',
+            },
+            {
+              name: 'youtube',
+              type: 'url',
+            },
+            {
               name: 'website',
               type: 'url',
             },
@@ -137,10 +153,58 @@ export default defineType({
       group: 'our_mission',
     }),
     defineField({
+      name: 'v1_tb',
+      title: 'Values 1  - Title Bold',
+      group: 'values',
+      type: 'string',
+    }),
+    defineField({
+      name: 'v1_t',
+      title: 'Values 1  - Title',
+      group: 'values',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'v1_desc',
+      title: 'Values 1  - Description',
+      group: 'values',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
+    defineField({
       name: 'v1',
       title: 'Values 1',
       type: 'image',
       group: 'values',
+    }),
+    defineField({
+      name: 'v2_tb',
+      title: 'Values 2  - Title Bold',
+      group: 'values',
+      type: 'string',
+    }),
+    defineField({
+      name: 'v2_t',
+      title: 'Values 2  - Title',
+      group: 'values',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'v2_desc',
+      title: 'Values 2  - Description',
+      group: 'values',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'v2',
@@ -149,10 +213,40 @@ export default defineType({
       type: 'image',
     }),
     defineField({
+      name: 'v3_tb',
+      group: 'values',
+      title: 'Values 3  - Title Bold',
+      type: 'string',
+    }),
+    defineField({
+      name: 'v3_t',
+      group: 'values',
+      title: 'Values 3  - Title',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'v3_desc',
+      title: 'Values 3 - Description',
+      group: 'values',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
+    defineField({
       name: 'v3',
       group: 'values',
       title: 'Values 3',
       type: 'image',
+    }),
+    defineField({
+      name: 'omtitle',
+      title: 'Our Mission Titlle',
+      group: 'our_mission',
+      type: 'string',
     }),
     defineField({
       name: 'omdesc',
@@ -161,8 +255,14 @@ export default defineType({
       type: 'text',
     }),
     defineField({
+      name: 'autitle',
+      title: 'Serivce Title',
+      group: 'about_us',
+      type: 'string',
+    }),
+    defineField({
       name: 'audesc',
-      title: 'About Us Text',
+      title: 'Services Text',
       group: 'about_us',
       type: 'text',
     }),
