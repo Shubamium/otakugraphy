@@ -27,6 +27,10 @@ export default defineType({
             title: 'Video',
             value: 'video',
           },
+          {
+            title: 'Video (Youtube Embed)',
+            value: 'video_yt',
+          },
         ],
       },
       initialValue: 'image',
@@ -38,15 +42,29 @@ export default defineType({
       options: {
         metadata: ['image', 'exif', 'location', 'blurhash'],
       },
-      hidden: ({parent}) => parent?.type === 'video',
+      hidden: ({parent}) => parent?.type !== 'image',
     }),
     defineField({
       name: 'video',
       title: 'Video File',
       type: 'file',
-      hidden: ({parent}) => parent?.type === 'image',
+      hidden: ({parent}) => parent?.type !== 'video',
     }),
-
+    defineField({
+      name: 'video_id',
+      title: 'Youtube Video ID',
+      hidden: ({parent}) => parent?.type !== 'video_yt',
+      type: 'string',
+    }),
+    defineField({
+      name: 'video_aspect',
+      title: 'Youtube Video -  Aspect Ratio',
+      description: 'Format is Width / Height, default is 16 / 9',
+      initialValue: '16 / 9',
+      placeholder: '16 / 9',
+      hidden: ({parent}) => parent?.type !== 'video_yt' || parent?.video_id === undefined,
+      type: 'string',
+    }),
     defineField({
       name: 'gd',
       title: 'General Data',

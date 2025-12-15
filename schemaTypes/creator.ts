@@ -25,11 +25,7 @@ export default defineType({
       title: 'Art',
       type: 'image',
     }),
-    defineField({
-      name: 'date',
-      title: 'Date',
-      type: 'date',
-    }),
+
     defineField({
       name: 'event',
       title: 'Creator event',
@@ -88,6 +84,33 @@ export default defineType({
       name: 'Video',
       title: 'Youtube Video ID',
       type: 'string',
+    }),
+
+    defineField({
+      name: 'date',
+      title: 'Date',
+      description: 'Used as a backup date if the Youtube API fails',
+      type: 'date',
+    }),
+    defineField({
+      name: 'fields',
+      title: 'Custom Fields',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              type: 'string',
+            },
+            {
+              name: 'value',
+              type: 'text',
+            },
+          ],
+        },
+      ],
     }),
   ],
 })
