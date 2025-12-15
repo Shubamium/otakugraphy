@@ -10,6 +10,18 @@ export default defineType({
       name: 'global',
     },
     {
+      name: 'title',
+      title: 'Title',
+    },
+    {
+      name: 'footer',
+      title: 'Footer',
+    },
+    {
+      name: 'contact',
+      title: 'Contact',
+    },
+    {
       name: 'our_mission',
       title: 'Our Mission',
     },
@@ -28,6 +40,10 @@ export default defineType({
     {
       name: 'cls',
       title: 'Currently Livestreaming',
+    },
+    {
+      name: 'fc',
+      title: 'Featured Creators',
     },
   ],
   fields: [
@@ -94,6 +110,49 @@ export default defineType({
           ],
         },
       ],
+    }),
+
+    defineField({
+      name: 'ti_ml',
+      title: 'Title - Main Logo',
+      group: 'title',
+      type: 'image',
+    }),
+    defineField({
+      name: 'ti_bg',
+      title: 'Title - Background',
+      group: 'title',
+      type: 'image',
+    }),
+    defineField({
+      name: 'ft_bg',
+      title: 'Footer - Background',
+      group: 'footer',
+      type: 'image',
+    }),
+    defineField({
+      name: 'ft_title',
+      title: 'Footer - Title',
+      group: 'footer',
+      type: 'string',
+    }),
+    defineField({
+      name: 'ft_desc',
+      title: 'Footer - Description',
+      group: 'footer',
+      type: 'text',
+    }),
+    defineField({
+      name: 'ct_bg',
+      title: 'Contact - Background',
+      group: 'contact',
+      type: 'image',
+    }),
+    defineField({
+      name: 'ct_fs',
+      title: 'Contact - Form Side',
+      group: 'contact',
+      type: 'image',
     }),
     defineField({
       name: 'testimonials',
@@ -266,7 +325,18 @@ export default defineType({
       group: 'about_us',
       type: 'text',
     }),
-
+    defineField({
+      name: 'fc_t',
+      title: 'Featured Creators - Title',
+      type: 'string',
+      group: 'fc',
+    }),
+    defineField({
+      name: 'fc_d',
+      title: 'Featured Creators - Description',
+      group: 'fc',
+      type: 'text',
+    }),
     defineField({
       name: 'currentlyLive',
       title: 'Currently Live Streaming',

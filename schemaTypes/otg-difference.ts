@@ -13,6 +13,16 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'otg_t',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'otg_d',
+      title: 'Description',
+      type: 'text',
+    }),
+    defineField({
       name: 'frames',
       title: 'Frame List',
       type: 'array',
