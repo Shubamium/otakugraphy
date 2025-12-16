@@ -23,6 +23,34 @@ export default defineType({
       type: 'text',
     }),
     defineField({
+      name: 'otg_b',
+      title: 'Background',
+      type: 'image',
+    }),
+
+    defineField({
+      name: 'cs',
+      title: 'Center Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'desc',
+          title: 'Description',
+          type: 'text',
+        },
+        {
+          name: 'image',
+          title: 'Image',
+          type: 'image',
+        },
+      ],
+    }),
+    defineField({
       name: 'frames',
       title: 'Frame List',
       type: 'array',

@@ -27,12 +27,17 @@ export default defineType({
     }),
 
     defineField({
-      name: 'event',
-      title: 'Creator event',
-      type: 'reference',
-      to: {
-        type: 'creator-event',
-      },
+      name: 'events',
+      title: 'Creator Event List',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'creator-event',
+          },
+        },
+      ],
     }),
     defineField({
       name: 'color',
@@ -70,6 +75,14 @@ export default defineType({
             value: 'pink',
           },
           {
+            title: 'Grey',
+            value: 'grey',
+          },
+          {
+            title: 'Brown',
+            value: 'brown',
+          },
+          {
             title: 'White',
             value: 'white',
           },
@@ -83,6 +96,22 @@ export default defineType({
     defineField({
       name: 'Video',
       title: 'Youtube Video ID',
+      type: 'string',
+    }),
+    defineField({
+      name: 'extra_vids',
+      title: 'Extra Videos (YT Vid ID)',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+    }),
+    defineField({
+      name: 'channel_link',
+      title: 'Youtube Channel Link',
+      description: 'Used if the Youtube Video ID is not provided',
       type: 'string',
     }),
 
