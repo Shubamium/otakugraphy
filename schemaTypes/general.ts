@@ -10,6 +10,10 @@ export default defineType({
       name: 'global',
     },
     {
+      title: 'Navigation ',
+      name: 'nav',
+    },
+    {
       name: 'title',
       title: 'Title',
     },
@@ -82,7 +86,57 @@ export default defineType({
       group: 'global',
       of: [{type: 'string'}],
     }),
-
+    defineField({
+      name: 'navlist',
+      title: 'Navigation ',
+      group: 'nav',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              type: 'string',
+            },
+            {
+              name: 'rl',
+              title: 'Route Link',
+              description: 'Ex: /home, /about, /contact',
+              hidden: ({parent}) => parent?.is_dropdown,
+              type: 'string',
+            },
+            {
+              name: 'is_dropdown',
+              type: 'boolean',
+            },
+            {
+              name: 'dr_list',
+              title: 'Dropdown Menu List',
+              type: 'array',
+              hidden: ({parent}) => !parent?.is_dropdown,
+              of: [
+                {
+                  type: 'object',
+                  fields: [
+                    {
+                      name: 'name',
+                      type: 'string',
+                    },
+                    {
+                      name: 'rl',
+                      title: 'Route Link',
+                      description: 'Ex: /home, /about, /contact',
+                      type: 'string',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }),
     defineField({
       name: 'cm',
       title: 'Categories Media',
