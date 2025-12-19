@@ -253,17 +253,18 @@ export default defineType({
         },
       ],
     }),
-    defineField({
-      name: 'abi',
-      title: 'About Us Image',
-      group: 'about_us',
-      type: 'image',
-    }),
+
     defineField({
       name: 'om',
       title: 'Our Mission Image',
       type: 'image',
       group: 'our_mission',
+    }),
+    defineField({
+      name: 'abi',
+      title: 'Services Image',
+      group: 'about_us',
+      type: 'image',
     }),
     defineField({
       name: 'v1_tb',
