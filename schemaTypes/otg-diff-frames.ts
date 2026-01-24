@@ -1,61 +1,20 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'otg-diff',
-  title: 'The OTG Difference',
+  name: 'otg-frames',
+  title: 'The OTG Difference - Frames List',
   type: 'document',
 
   fields: [
     // Define your fields here
     defineField({
-      name: 'preset',
-      title: 'Preset ID',
+      name: 'categoryName',
+      title: 'Category Name',
       type: 'string',
-    }),
-    defineField({
-      name: 'otg_t',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
-      name: 'otg_d',
-      title: 'Description',
-      type: 'text',
-    }),
-    defineField({
-      name: 'otg_b',
-      title: 'Background',
-      type: 'image',
-    }),
-
-    defineField({
-      name: 'cs',
-      title: 'Center Section',
-      type: 'object',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-        },
-        {
-          name: 'desc',
-          title: 'Description',
-          type: 'text',
-        },
-        {
-          name: 'image',
-          title: 'Image',
-          type: 'image',
-        },
-      ],
     }),
     defineField({
       name: 'frames',
       title: 'Frame List',
-      deprecated: {
-        reason: 'Use OTG Frames list instead',
-      },
       type: 'array',
       of: [
         {
