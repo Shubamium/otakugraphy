@@ -4,13 +4,25 @@ export default defineType({
   name: 'creator',
   title: 'Creator  - List',
   type: 'document',
-
+  orderings: [
+    {
+      title: 'Order (Ascending)',
+      name: 'ordering',
+      by: [{field: 'ordering', direction: 'asc'}],
+    },
+  ],
   fields: [
     // Define your fields here
     defineField({
       name: 'name',
       title: 'Creator Name',
       type: 'string',
+    }),
+    defineField({
+      name: 'ordering',
+      title: 'Order (Ascending)',
+      type: 'number',
+      initialValue: 500,
     }),
     defineField({
       name: 'agency',
