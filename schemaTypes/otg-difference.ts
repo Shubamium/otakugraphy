@@ -12,6 +12,17 @@ export default defineType({
       title: 'Preset ID',
       type: 'string',
     }),
+
+    defineField({
+      name: 'gated',
+      title: 'Is Under Construction?',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'gated_pass',
+      title: 'Access Password',
+      type: 'string',
+    }),
     defineField({
       name: 'otg_t',
       title: 'Title',
