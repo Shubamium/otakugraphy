@@ -59,17 +59,25 @@ export default defineType({
       type: 'string',
       group: 'global',
     }),
-    defineField({
-      name: 'gated',
-      title: 'Is Under Construction?',
-      group: 'global',
-      type: 'boolean',
-    }),
+    // defineField({
+    //   name: 'gated',
+    //   title: 'Is Under Construction?',
+    //   group: 'global',
+    //   type: 'boolean',
+    // }),
     defineField({
       name: 'gated_pass',
       title: 'Website Password',
       group: 'global',
       type: 'string',
+    }),
+    defineField({
+      name: 'gatedlist',
+      title: 'Gated Pages',
+      group: 'global',
+      description: 'Route list that are blocked [ex: /about, /contact] -  add / for all pages',
+      type: 'array',
+      of: [{type: 'string'}],
     }),
     defineField({
       name: 'hlm',
