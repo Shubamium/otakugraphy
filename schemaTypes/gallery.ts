@@ -34,8 +34,8 @@ export default defineType({
         },
         {
           name: 'link',
-          title: 'Link',
-          type: 'url',
+          title: 'Youtube Link (Video ID)',
+          type: 'string',
         },
       ],
     }),
