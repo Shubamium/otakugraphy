@@ -13,15 +13,21 @@ export default defineType({
       type: 'string',
     }),
 
+    // defineField({
+    //   name: 'gated',
+    //   title: 'Is Under Construction?',
+    //   type: 'boolean',
+    // }),
+    // defineField({
+    //   name: 'gated_pass',
+    //   title: 'Access Password',
+    //   type: 'string',
+    // }),
     defineField({
-      name: 'gated',
-      title: 'Is Under Construction?',
-      type: 'boolean',
-    }),
-    defineField({
-      name: 'gated_pass',
-      title: 'Access Password',
-      type: 'string',
+      name: 'tab_order',
+      title: 'Tab Ordering',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'otg-frames'}}],
     }),
     defineField({
       name: 'otg_t',
