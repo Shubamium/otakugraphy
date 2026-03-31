@@ -56,11 +56,6 @@ export default defineType({
               type: 'string',
             },
             {
-              name: 'thumbnail',
-              title: 'Thumbnail',
-              type: 'image',
-            },
-            {
               name: 'link',
               title: 'Youtube Link (Video ID)',
               type: 'string',
