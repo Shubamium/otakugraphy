@@ -21,6 +21,9 @@ export default defineType({
       name: 'highlights',
       title: 'Highlights',
       type: 'object',
+      deprecated: {
+        reason: 'Changed to a List of Highlights, See `Hightlight List` below.',
+      },
       fields: [
         {
           name: 'ht',
@@ -36,6 +39,33 @@ export default defineType({
           name: 'link',
           title: 'Youtube Link (Video ID)',
           type: 'string',
+        },
+      ],
+    }),
+    defineField({
+      name: 'highlight-list',
+      title: 'Highlight List',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'ht',
+              title: 'Title',
+              type: 'string',
+            },
+            {
+              name: 'thumbnail',
+              title: 'Thumbnail',
+              type: 'image',
+            },
+            {
+              name: 'link',
+              title: 'Youtube Link (Video ID)',
+              type: 'string',
+            },
+          ],
         },
       ],
     }),
