@@ -43,7 +43,7 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'highlight-list',
+      name: 'highlight_list',
       title: 'Highlight List',
       type: 'array',
       of: [
