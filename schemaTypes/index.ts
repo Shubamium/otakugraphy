@@ -6,7 +6,7 @@ import galleryGroup from './gallery-group'
 import general from './general'
 import homeCategory from './home-category'
 import media from './media'
-import otgDiffFrames from './otg-diff-frames'
+import otgDiffFrames, {FrameBlock} from './otg-diff-frames'
 import otgDifference from './otg-difference'
 import partners from './partners'
 
@@ -20,5 +20,6 @@ export const schemaTypes = [
   creatorEvent,
   creator,
   otgDifference,
+  FrameBlock,
   otgDiffFrames,
 ]
