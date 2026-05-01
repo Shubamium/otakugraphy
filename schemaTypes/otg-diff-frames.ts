@@ -36,6 +36,10 @@ export default defineType({
                     value: 'image',
                   },
                   {
+                    title: 'Text',
+                    value: 'text',
+                  },
+                  {
                     title: 'Video',
                     value: 'video',
                   },
@@ -45,11 +49,20 @@ export default defineType({
             defineField({
               name: 'image',
               type: 'image',
+              hidden: ({parent}) => parent?.type !== 'image',
             }),
             defineField({
               name: 'ytvid',
               title: 'Youtube Video ID',
               type: 'string',
+              hidden: ({parent}) => parent?.type !== 'video',
+            }),
+            defineField({
+              name: 'text',
+              title: 'Text',
+              type: 'array',
+              of: [{type: 'block'}],
+              hidden: ({parent}) => parent?.type !== 'text',
             }),
             defineField({
               name: 'extraVideos',
